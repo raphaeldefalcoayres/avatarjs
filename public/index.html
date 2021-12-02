@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="wclassth=device-wclassth, initial-scale=1.0">
+  <title>Avatar JS Demo</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+  <style>
+    body{
+      padding: 0;
+      margin: 0;
+      border: 0;
+      box-sizing: border-box;
+    }
+
+    * {
+      font-family: 'Press Start 2P', cursive; border-radius: 15px;
+    }
+
+    .container{
+      width:100%;
+      align-items: center; justify-content: center; height: 100vh;
+      display: flex;
+      flex-direction: column;
+      padding: 24px 0;
+    }
+
+    .box{
+      display: flex;
+    }
+
+    .box-avatar{
+      display:flex; align-items: center; justify-content: center; margin: 16px;
+    }
+
+    .name-avatar{
+      font-size: 32px;
+      padding: 10px;
+      text-align: center;
+      align-self: center;
+      justify-self: center;
+      margin-bottom: 16px;
+      border: 2px solid rgba(101, 201, 255, 0.8);
+      color: rgb(101, 201, 255);
+    }
+
+    .name-avatar:focus{
+      border: 2px solid rgba(101, 201, 255, 1);
+      outline: 0;
+    }
+
+    .name-avatar::placeholder {
+      color: rgba(101, 201, 255, 0.8);
+    }
+
+    .box-type-personalizations, .box-personalizations{
+      display: flex;
+      border: 2px solid rgba(101, 201, 255, 1);
+      padding: 10px;
+      height: 60px;
+      align-items: center;
+      justify-content: center;
+      margin: 10px 0;
+    }
+
+    .item-item-type-personalization{
+      flex:1;
+      height: 64px;
+      border: 2px solid rgba(101, 201, 255, 1);
+
+    }
+
+  </style>
+</head>
+<body>
+  <div class="container">
+    <input class="name-avatar" placeholder="Nome do meu avatar" />
+    <div class="box">
+      <div class="box-avatar">
+        <div id="avatar"></div>
+      </div>
+      <div class="box-type-personalizations">
+        <div class="item-item-type-personalization">1</div>
+        <div class="item-item-type-personalization">2</div>
+        <div class="item-item-type-personalization">3</div>
+        <div class="item-item-type-personalization">4</div>
+        <div class="item-item-type-personalization">5</div>
+        <div class="item-item-type-personalization">6</div>
+        <div class="item-item-type-personalization">7</div>
+        <div class="item-item-type-personalization">8</div>
+        <div class="item-item-type-personalization">9</div>
+        <div class="item-item-type-personalization">10</div>
+        <div class="item-item-type-personalization">11</div>
+        <div class="item-item-type-personalization">12</div>
+        <div class="item-item-type-personalization">13</div>
+        <div class="item-item-type-personalization">14</div>
+        <div class="item-item-type-personalization">15</div>
+      </div>
+      <div class="box-personalizations">
+
+      </div>
+    </div>
+  </div>
+
+  <script src="/src/avatar.js"></script>
+  <script>
+    const generateSvgAvatar = Avataaars.create({ wclassth: 300,height: 300 })
+
+    document.getElementById("avatar").parentNode.innerHTML = generateSvgAvatar
+
+  </script>
+</body>
+</html>
